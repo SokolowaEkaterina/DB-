@@ -1,0 +1,137 @@
+.main_scrin{
+    box-sizing: border-box;
+    height: 690px;
+    background: $bg_gradient;
+
+    padding-top: 191px;
+    padding-bottom: 171px;
+    padding-left: 35px;
+
+    .text{
+        position: relative;
+        z-index: 1;
+        width: 740px;
+        color: #FFF;
+
+        p{
+            width: 445px;
+            margin: 14px 0 14px 0;
+        }
+    }
+}
+
+.main_scrin_bg{
+    position: absolute;
+    right: 0;
+    // top: -40px;
+    top: 0;
+    z-index: 0;
+}
+
+.scrin{
+    padding-top: 191px;
+    padding-bottom: 105px;
+    background-color: aqua;
+    background-image: url(../img/scrin_bg.jpg);
+    background-position: top;
+    background-size: cover;
+
+    .h1{
+        display: block;
+        margin: 0 auto;
+        // width: 50%;
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 1270px){
+    .main_scrin_bg{
+        right: -10%;
+    }
+}
+@media screen and (max-width: 1120px){
+    .main_scrin_bg{
+        right: -20%;
+    }
+}
+@media screen and (max-width: 970px){
+    .main_scrin_bg{
+        right: -30%;
+    }
+}
+@media screen and (max-width:900px) {
+    .scrin,
+    .main_scrin{
+        h1,
+        .h1{
+            width: 100%;
+        }
+    }
+    .main_scrin{
+        .text{
+            width: 100%;
+            p{
+                width: 80%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 890px){
+    .main_scrin_bg{
+        right: -40%;
+    }
+}
+@media screen and (max-width: 820px){
+    .main_scrin_bg{
+        right: -50%;
+    }
+}
+@media screen and (max-width: 770px){
+    .main_scrin_bg{
+        right: -60%;
+    }
+}
+@media screen and (max-width: 720px){
+    .main_scrin_bg{
+        right: -70%;
+    }
+}
+@media screen and (max-width:702px){
+    .main_scrin{
+        padding-bottom: 171px;
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 650px){
+    .main_scrin_bg{
+        right: -80%;
+    }
+}
+@media screen and (max-width: 618px){
+    .main_scrin_bg{
+        right: -90%;
+    }
+}
+@media screen and (max-width: 580px){
+    .main_scrin_bg{
+        right: -100%;
+    }
+}
+@media screen and (max-width: 550px){
+    .main_scrin_bg{
+        right: -110%;
+    }
+}
+@media screen and (max-width:525px) {
+    .main_scrin_bg{
+        display: none;
+    }
+    .main_scrin{
+        padding-bottom: 50px;
+        height: auto;
+        background-image: url(../img/main_scrin_bg.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

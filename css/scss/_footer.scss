@@ -1,0 +1,113 @@
+footer{
+    background-color: $color_d_blue;
+    // color: #FFF;
+    .footer_block{
+        padding: 70px 110px 50px 109px;
+        display: flex;
+        justify-content: space-between;
+        .item{
+            width: calc(20% - 120px);
+            box-sizing: border-box;
+
+            &:first-child{
+                width: 20%;
+            }
+            .h2{
+                margin-top: 8px;
+                text-align: left;
+                color: #FFF;
+                margin-bottom: 32px;
+            }
+            li{
+                margin-bottom: 16px;
+            }
+            a{
+                color: #FFF;
+                font-weight: 300;
+                @include transition(all);
+
+                &:hover{
+                    opacity: 50%;
+                }
+            }
+            p{
+                color: #FFF;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .copyrit{
+        font-size: 12px;
+        background-color: #FFF;
+        text-align: center;
+        padding: 32px 0 30px 0;
+    }
+}
+
+@media screen and (max-width:1344px){
+    footer{
+        .footer_block{
+            padding: 70px 50px 50px 50px;
+        }
+    }
+}
+@media screen and (max-width:1225px){
+    footer{
+        .footer_block{
+            .item{
+                width: calc(20% - 90px);
+            }
+        }
+    }
+}
+@media screen and (max-width:1098px){
+    footer{
+        .footer_block{
+            padding: 70px 0px 50px 0px;
+
+            .item{
+            
+                width: calc(20% - 70px);
+            }
+        }
+    }
+}
+@media screen and (max-width:918px){
+    footer{
+        .footer_block{
+
+            .item{
+                li{
+                    margin-bottom: 13px;
+                }
+                a{
+                    font-size: 14px;
+                }
+                width: calc(20% - 50px);
+            }
+        }
+    }
+}
+@media screen and (max-width:822px){
+    footer{
+        .footer_block{
+            flex-wrap: wrap;
+            .item{
+                &:first-child{
+                    width: 100%;
+                }
+                width: 100%;
+                li{
+                    display: none;
+                }
+            }
+            .footer_active{
+                background-color: rgb(187, 37, 37);
+                li{
+                    display: block;
+                }
+            }
+        }
+    }
+}

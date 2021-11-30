@@ -1,0 +1,33 @@
+.mailing{
+    padding: 55px 0;
+    background-image: url(../img/mailing_bg.jpg);
+    text-align: center;
+    color: #FFF;
+
+    span.h1{
+        display: block;
+        width: 740px;
+        margin: 0 auto;
+    }
+    p{
+        width: 517px;
+        margin: 9px auto 0 auto;
+    }
+
+    .email{
+        // margin-top: 32px;
+        margin: 26px auto 0 auto;
+    
+
+        input[type='email']{
+            // width: 640px;
+            width: 500px;
+            margin: 0 -3px 0 0;
+        }
+        input[type='button']{
+            margin: 0 0px 0 -2px;
+            width: 140px;
+            // transform: translateX(-100%);
+        }
+    }
+}

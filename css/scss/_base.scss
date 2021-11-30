@@ -1,0 +1,195 @@
+$color_text: #434343;
+$color_d_blue: #023957;
+$color_m_blue: #056088;
+$color_l_blue: #09A7CA;
+
+$button_bg: linear-gradient(104.58deg, #056088 10.57%, #09A7CA 96.62%);
+$bg_gradient: linear-gradient(1.17deg, #023957 -19.65%, #056088 93.67%);
+
+$main_font_family: 'Poppins', sans-serif;
+
+$max-width: 1440px;
+
+@mixin transition ($property){
+    -webkit-transition: $property 0.3s ease 0s;
+    -moz-transition: $property 0.3s ease 0s;
+    -o-transition: $property 0.3s ease 0s;
+    transition: $property 0.3s ease 0s;
+}
+
+body{
+    font-family: $main_font_family;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 320px;
+    
+	//background:  url(images/site.jpg) no-repeat center top;
+	//background-size: 1920px auto;
+
+    // background-image: url(../img/home.jpg);
+    // background-size: cover;
+    // background-position: top;
+}
+
+.page_width {
+    padding: 0px 70px;
+    margin: 0 auto;
+    max-width: $max-width;
+    position: relative;
+
+    // opacity: 50%;
+}
+@media screen and (max-width: 1024px){
+    .page_width{
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 425px){
+    .page_width{
+        padding: 0 20px;
+    }
+}
+
+.padding{
+    margin-top: 101px;
+}
+@media screen and (max-width:570px) {
+    .padding{
+        margin-top: 60px;
+    }
+}
+
+h1,.h1, h2,.h2, h3,.h3, h4,.h4{
+    font-weight: 700;
+}
+
+h1,.h1{
+    line-height: 78px;
+    font-size: 52px;
+    color: #FFF;
+}
+h1{
+    text-align: left;
+}
+.h1{
+    text-align: center;
+}
+
+@media screen and (max-width:900px){
+    h1,.h1{
+        font-size: 43px;
+        line-height: 69px;
+    }
+}
+@media screen and (max-width:525px){
+    h1,.h1{
+        font-size: 36px;
+        line-height: 62px;
+        
+    }
+}
+
+h2,.h2{
+    line-height: 40.8px;
+    font-size: 24px;
+    color: $color_m_blue;
+
+    margin-bottom: 16px;
+
+    text-align: center;
+    display: block;
+}
+
+.under_h2{
+    display: block;
+    margin: 16px auto 34px auto;
+    text-align: center;
+    line-height: 28.8px;
+    width: 348px;
+}
+@media screen and (max-width:840px){
+    h2,.h2, .under_h2{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+h3,.h3{
+    font-size: 20px;
+    line-height: 34px;
+    color: $color_m_blue;
+}
+
+p{
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 16px 0;
+}
+
+a{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.button{
+    display: inline-block;
+    padding: 25px 41px;
+    font-size: 16px;
+    color: #FFF;
+    text-align: center;
+
+    margin: 16px 0;
+
+    background: $button_bg;
+
+    @include transition(all);
+
+    &:hover{
+        background-color: $color_m_blue;
+    }
+}
+@media screen and (max-width:1208px){
+    .button{
+        padding: 25px 30px;
+    }
+}
+@media  screen and (max-width:918px) {
+    .button{
+        font-size: 13px;
+    }
+    
+}
+
+input{
+    background: #FFF;
+    border: none;
+    box-sizing: border-box;
+    padding: 18px 30px;
+    font-size: 16px;
+    line-height: 27px;
+
+    &::placeholder{
+        font-size: 16px;
+        line-height: 27px;
+        color: #000;
+        opacity: 40%;
+    }
+    // width: 502px;
+
+}
+
+input[type='button']{
+    background: $button_bg;
+    color: #FFF;
+    cursor: pointer;
+}

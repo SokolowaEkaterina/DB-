@@ -1,0 +1,191 @@
+.our_company{
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+
+    h2{
+        text-align: left;
+    }
+
+    .img_and_circle{
+        width: calc(50% - 10px);
+        position: relative;
+
+        .image{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            // grid-template-rows: 25% 25% 25% 25%;
+            grid-gap: 20px;
+    
+            overflow: hidden;
+            width: 100%;
+            height: 419px;
+            .item{
+                position: relative;
+                overflow: hidden;
+    
+                &:nth-child(1){
+                    grid-column-start: 1;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+                &:nth-child(2){
+                    grid-column-start: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+                }
+                &:nth-child(3){
+                    grid-column-start: 1;
+                    grid-row-start: 3;
+                    grid-row-end: 4;
+                }
+                &:nth-child(4){
+                    grid-column-start: 2;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+                    grid-row-end: 4;
+                }
+    
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .circle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 168px;
+            height: 168px;
+            border-radius: 50%;
+            color: $color_m_blue;
+            background-color: #FFF;
+
+            text-align: center;
+            span{
+                position: relative;
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 27px;
+                // margin-top: 204px;
+
+                &::before{
+                    content: '';
+                    width: 60px;
+                    height:30px;
+                    border-bottom: 11px solid $color_d_blue;
+                    border-left: 11px solid $color_d_blue;
+                    display: block;
+                    // text-align: center;
+                    margin: 32px auto 37px auto;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    
+    .text{
+        width: calc(50% - 120px);
+        // width: 473/1300*100%; 
+        p{
+            width: 90%;
+        }
+        .achievements{
+            // margin:  16px -29px;
+            margin: 16px 0;
+            display: flex;
+            justify-content: space-between;
+            // span{
+            //     margin: 0 29px;
+            // }
+        }
+    }
+}
+
+@media screen and (max-width:1324px){
+    .our_company{
+        .text{
+            width: calc(50% - 80px);
+        }
+    }
+}
+@media screen and (max-width:1100px){
+    .our_company{
+        .text{
+            width: calc(50% - 50px);
+        }
+    }
+}
+@media screen and (max-width:960px){
+    .our_company{
+        .img_and_circle{
+            width: calc(50% - 30px);
+            .image{
+                height: 380px;
+            }
+
+            .circle{
+                transform: translate(-50%, -60%);
+            }
+        }
+        .text{
+            width: calc(50% - 0px);
+        }
+    }
+}
+@media screen and (max-width:830px) {
+    .our_company{
+        flex-wrap: wrap;
+        .img_and_circle{
+            width: 100%;
+
+            .circle{
+                transform: translate(-50%, -50%);
+            }
+        }
+        .text{
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:440px) {
+    .our_company{
+        .img_and_circle{
+            .image{
+                height: 380px;
+            }
+
+            .circle{
+                width: 135px;
+                height: 135px;
+                span{
+    
+                    &::before{
+                        width: 30px;
+                        height:15px;
+                        border-bottom: 8px solid $color_d_blue;
+                        border-left: 8px solid $color_d_blue;
+                        // text-align: center;
+                        margin: 32px auto 20px auto;
+                        transform: rotate(-45deg);
+                    }
+                }
+                
+            }
+        }
+        .text{
+            span{
+                text-align: center;
+                width: 100px;
+                }
+            }
+        
+    }
+}
