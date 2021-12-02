@@ -177,10 +177,16 @@ input::placeholder {
   opacity: 40%;
 }
 
+@media screen and (max-width: 450px) {
+  input {
+    padding: 18px 15px;
+  }
+}
 input[type=button] {
   background: linear-gradient(104.58deg, #056088 10.57%, #09A7CA 96.62%);
   color: #FFF;
   cursor: pointer;
+  text-align: center;
 }
 
 html, body {
@@ -1924,7 +1930,6 @@ header .menu_burger_active:after {
   }
 }
 .video {
-  background-color: aqua;
   position: relative;
   width: calc(100% - 220px);
   height: 512px;
@@ -1993,9 +1998,72 @@ header .menu_burger_active:after {
   opacity: 80%;
 }
 
+@media screen and (max-width: 1100px) {
+  .video {
+    width: calc(100% - 100px);
+  }
+}
+@media screen and (max-width: 780px) {
+  .video {
+    width: calc(100% - 0px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .video .video_text {
+    padding: 20px 30px 32px 53px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .video {
+    height: 450px;
+  }
+  .video .video_text {
+    padding: 20px 30px 32px 53px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .video {
+    height: 420px;
+  }
+  .video::before {
+    width: 72px;
+    height: 72px;
+  }
+  .video::after {
+    border-top: 10px solid transparent;
+    border-left: 15px solid white;
+    border-bottom: 10px solid transparent;
+  }
+  .video .video_text {
+    width: 75%;
+    padding: 20px 30px 20px 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .video {
+    height: 400px;
+  }
+  .video .video_text {
+    width: 85%;
+    bottom: -35px;
+  }
+}
+@media screen and (max-width: 402px) {
+  .video {
+    height: 380px;
+  }
+  .video .video_text {
+    width: 90%;
+    bottom: -40px;
+    padding: 10px 5px 10px 15px;
+  }
+}
 .mailing {
   padding: 55px 0;
   background-image: url(../img/mailing_bg.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   text-align: center;
   color: #FFF;
 }
@@ -2020,6 +2088,55 @@ header .menu_burger_active:after {
   width: 140px;
 }
 
+@media screen and (max-width: 800px) {
+  .mailing span.h1 {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+  }
+  .mailing .email {
+    margin: 26px auto 0 auto;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mailing .email input[type=email] {
+    width: 80%;
+    margin: 0 0px 0 0;
+  }
+  .mailing .email input[type=button] {
+    margin: 0 0px 0 0px;
+    width: 20%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .mailing p {
+    width: 95%;
+  }
+  .mailing .email input[type=email] {
+    width: 70%;
+    margin: 0 0px 0 0;
+  }
+  .mailing .email input[type=button] {
+    margin: 0 0px 0 0px;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 340px) {
+  .mailing .email {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .mailing .email input[type=email] {
+    width: 100%;
+    margin: 0 0px 0 0;
+  }
+  .mailing .email input[type=button] {
+    margin: 20px auto 0 auto;
+    width: 50%;
+  }
+}
 footer {
   background-color: #023957;
 }

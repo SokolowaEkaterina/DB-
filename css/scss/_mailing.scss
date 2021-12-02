@@ -1,6 +1,9 @@
 .mailing{
     padding: 55px 0;
     background-image: url(../img/mailing_bg.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     text-align: center;
     color: #FFF;
 
@@ -28,6 +31,67 @@
             margin: 0 0px 0 -2px;
             width: 140px;
             // transform: translateX(-100%);
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .mailing{
+        span.h1{
+            width: 95%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .email{
+            // margin-top: 32px;
+            margin: 26px auto 0 auto;
+            width: 90%;
+            display: flex;
+        
+    
+            input[type='email']{
+                // width: 640px;
+                width: 80%;
+                margin: 0 0px 0 0;
+            }
+            input[type='button']{
+                margin: 0 0px 0 0px;
+                width: 20%;
+                // transform: translateX(-100%);
+            }
+        }
+    }
+}
+@media screen and (max-width:660px) {
+    .mailing{
+        p{
+            width: 95%;
+        }
+        .email{
+            input[type='email']{
+                width: 70%;
+                margin: 0 0px 0 0;
+            }
+            input[type='button']{
+                margin: 0 0px 0 0px;
+                width: 30%;
+            }
+        }
+    }
+}
+@media screen and (max-width:340px) {
+    .mailing{
+        .email{
+            flex-wrap: wrap;
+            input[type='email']{
+                width: 100%;
+                margin: 0 0px 0 0;
+            }
+            input[type='button']{
+                margin: 20px auto 0 auto;
+                width: 50%;
+            }
         }
     }
 }

@@ -90,8 +90,7 @@ h1{
 @media screen and (max-width:525px){
     h1,.h1{
         font-size: 36px;
-        line-height: 62px;
-        
+        line-height: 62px;     
     }
 }
 
@@ -188,8 +187,15 @@ input{
 
 }
 
+@media screen and (max-width:450px){
+    input{
+        padding: 18px 15px;
+    }
+}
+
 input[type='button']{
     background: $button_bg;
     color: #FFF;
     cursor: pointer;
+    text-align: center;
 }
