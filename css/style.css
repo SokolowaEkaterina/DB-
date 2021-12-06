@@ -189,6 +189,105 @@ input[type=button] {
   text-align: center;
 }
 
+.text_and_img_bg {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  color: #FFF;
+  padding: 20px 0;
+}
+.text_and_img_bg .h2 {
+  color: #FFF;
+}
+.text_and_img_bg .block_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.img_and_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.img_and_text .img_block {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  position: relative;
+  width: calc(50% - 150px);
+}
+.img_and_text .img_block img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.img_and_text .img_block .second_img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -o-object-fit: none;
+     object-fit: none;
+  position: absolute;
+  z-index: 5;
+  right: -110px;
+  bottom: -49px;
+  width: 80%;
+  height: auto;
+}
+.img_and_text .right {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.img_and_text .text {
+  margin-top: 35px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 50%;
+}
+.img_and_text .text .h2 {
+  text-align: left;
+}
+
+@media screen and (max-width: 1480px) {
+  .img_and_text .img_block .second_img {
+    border: 20px solid #fff;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .img_and_text .img_block {
+    width: calc(50% - 30px);
+  }
+  .img_and_text .img_block .second_img {
+    width: 70%;
+    right: 30px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .img_and_text .img_block .second_img {
+    display: none;
+  }
+}
+@media screen and (max-width: 770px) {
+  .img_and_text {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .img_and_text .img_block {
+    width: 100%;
+  }
+  .img_and_text .text {
+    width: 100%;
+  }
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -401,7 +500,6 @@ header .menu_burger_active:after {
 .scrin {
   padding-top: 191px;
   padding-bottom: 105px;
-  background-color: aqua;
   background-image: url(../img/scrin_bg.jpg);
   background-position: top;
   background-size: cover;
@@ -409,7 +507,7 @@ header .menu_burger_active:after {
 .scrin .h1 {
   display: block;
   margin: 0 auto;
-  width: 720px;
+  width: 80%;
 }
 
 @media screen and (max-width: 1270px) {

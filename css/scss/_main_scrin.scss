@@ -31,7 +31,6 @@
 .scrin{
     padding-top: 191px;
     padding-bottom: 105px;
-    background-color: aqua;
     background-image: url(../img/scrin_bg.jpg);
     background-position: top;
     background-size: cover;
@@ -40,7 +39,8 @@
         display: block;
         margin: 0 auto;
         // width: 50%;
-        width: 720px;
+        // width: 720px;
+        width: 80%;
     }
 }
 
