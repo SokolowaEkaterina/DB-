@@ -169,26 +169,46 @@ a{
     
 }
 
-input{
+input,
+textarea{
+    border: 1px solid transparent;
+    font-family: $main_font_family;
     background: #FFF;
-    border: none;
     box-sizing: border-box;
     padding: 18px 30px;
     font-size: 16px;
     line-height: 27px;
+    @include transition(all);
 
     &::placeholder{
         font-size: 16px;
         line-height: 27px;
         color: #000;
         opacity: 40%;
+        @include transition(all);
     }
     // width: 502px;
 
+    &:focus{
+        border: 1px solid $color_text;
+        color: #000;
+        &::placeholder{
+            opacity: 100%;
+        }
+    }
+
 }
 
-@media screen and (max-width:450px){
-    input{
+input[type="button"]{
+    border: none;
+    &:focus{
+        border: none;
+    }
+}
+
+@media screen and (max-width:730px){
+    input,
+    textarea{
         padding: 18px 15px;
     }
 }
