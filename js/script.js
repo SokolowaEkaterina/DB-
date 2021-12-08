@@ -26,4 +26,27 @@ $(document).ready(function() {
     // $('.footer_item').on('click', function(){
     //     $(this).toggleClass('footer_active');
     // });
+
+    $('.slider').slick({
+        slidesToShow:3,
+        dots: true,
+        slidesToScroll: 3,
+        arrows:false,
+        responsive: [
+			{
+				breakpoint: 520,
+				settings: {
+				  slidesToShow: 2,
+                  slidesToScroll:2,
+				}
+			},
+            {
+				breakpoint: 380,
+				settings: {
+				  slidesToShow: 1,
+                  slidesToScroll:1,
+				}
+			},
+		]
+    });
 });
