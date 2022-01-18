@@ -100,14 +100,17 @@ footer{
                 width: 100%;
                 li{
                     display: none;
+                    opacity: 0;
+
+                @include transition (all);
                 }
             }
-            .footer_active{
-                background-color: rgb(187, 37, 37);
-                li{
-                    display: block;
-                }
-            }
+            // .footer_active{
+            //     li{
+            //         opacity: 100%;
+            //         display: block;
+            //     }
+            // }
         }
     }
 }

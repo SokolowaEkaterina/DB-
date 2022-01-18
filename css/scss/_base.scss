@@ -154,6 +154,7 @@ a{
     @include transition(all);
 
     &:hover{
+        opacity: 50%;
         background-color: $color_m_blue;
     }
 }

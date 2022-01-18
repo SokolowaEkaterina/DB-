@@ -351,4 +351,40 @@
     }
 }
 
+.gallery_content a.h2{
+    @include transition(all);
+    &:hover{
+        opacity: 50%;
+    }
+
+}
+
+@media screen and (max-width:1286px){
+    .banner{
+        padding: 220px 58px 29px 56px;
+
+        .h1{
+            width: 50%;
+        }
+        p{
+            width: 40%;
+        }
+    }
+}
+@media screen and (max-width:850px){
+    .banner{
+        padding: 180px 58px 29px 56px;
+        flex-wrap: wrap;
+
+        .h1{
+            text-align: center;
+            width: 100%;
+        }
+        p{
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+}
 //End Новости///////////////////////////

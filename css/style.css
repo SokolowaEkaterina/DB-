@@ -125,6 +125,7 @@ a {
   transition: all 0.3s ease 0s;
 }
 .button:hover {
+  opacity: 50%;
   background-color: #056088;
 }
 
@@ -370,6 +371,9 @@ header .menu li a {
   transition: all 0.3s ease 0s;
 }
 header .menu li a:hover {
+  border-bottom: 1px solid #FFF;
+}
+header .menu li .active {
   border-bottom: 1px solid #FFF;
 }
 header .menu_burger_active {
@@ -2289,12 +2293,9 @@ footer .copyrit {
   }
   footer .footer_block .item li {
     display: none;
-  }
-  footer .footer_block .footer_active {
-    background-color: #bb2525;
-  }
-  footer .footer_block .footer_active li {
-    display: block;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
 }
 .text_and_img_bg {
@@ -2627,6 +2628,40 @@ footer .copyrit {
   width: 26%;
 }
 
+.gallery_content a.h2 {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.gallery_content a.h2:hover {
+  opacity: 50%;
+}
+
+@media screen and (max-width: 1286px) {
+  .banner {
+    padding: 220px 58px 29px 56px;
+  }
+  .banner .h1 {
+    width: 50%;
+  }
+  .banner p {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .banner {
+    padding: 180px 58px 29px 56px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .banner .h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .banner p {
+    width: 100%;
+    text-align: center;
+  }
+}
 .slick-list {
   overflow: hidden;
 }

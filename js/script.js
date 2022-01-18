@@ -15,17 +15,17 @@ $(document).ready(function() {
                 });
             }
             // $('.footer_item').on('click', function(){
-            //     $(this).toggleClass('footer_active');
+            //     $('this').next.toggleClass('footer_active');
             // });
         }
-        else if($(window).width() > 822) {
-            $('.footer_item').removeClass('footer_active');
-        }
+        // else if($(window).width() > 822) {
+        //     $('.footer_item').removeClass('footer_active');
+        // }
       });
 
-    // $('.footer_item').on('click', function(){
-    //     $(this).toggleClass('footer_active');
-    // });
+    $('.footer_item').on('click', function(){
+        $(this).toggleClass('footer_active');
+    });
 
     $('.slider').slick({
         slidesToShow:3,
