@@ -49,4 +49,27 @@ $(document).ready(function() {
 			},
 		]
     });
+
+    $('.comment_slider').slick({
+        slidesToShow:3,
+        dots: true,
+        slidesToScroll: 3,
+        arrows:false,
+        responsive: [
+			{
+				breakpoint: 850,
+				settings: {
+				  slidesToShow: 2,
+                  slidesToScroll:2,
+				}
+			},
+            {
+				breakpoint: 550,
+				settings: {
+				  slidesToShow: 1,
+                  slidesToScroll:1,
+				}
+			},
+		]
+    });
 });
